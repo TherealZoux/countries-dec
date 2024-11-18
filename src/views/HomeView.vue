@@ -29,15 +29,6 @@ const searchCountries = computed(() => {
         type="search" placeholder="Search for a country..." v-model="searchData">
     </div>
 
-    <div class="card flex justify-center bg-light dark:bg-dark-elements rounded-[6px] shadow">
-
-      <select name="cars" id="cars" placeholder="Filter by region">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div>
   </section>
 
 
