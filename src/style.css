@@ -17,17 +17,6 @@ body {
 }
 
 h1 {
-  font-family: 'Nunito Sans', sans-serif;
   font-weight: 800; /* Extra-Bold */
 }
 
-.p-select-list-container{
-  background:#fff;
-  margin-top:4px;
-  max-height: 14rem;
-  text-align: center;
-  padding-left: 9px;
-  font-size: 15px;
-  border-radius: 6px;
-
-}
