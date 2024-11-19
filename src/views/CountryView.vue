@@ -59,7 +59,7 @@ setTimeout(() => {
           </ul>
         </div>
         <div>
-          <p class="font-bold flex gap-1 items-center w-fit ">Border Countries: <span
+          <p class="font-bold flex gap-1 items-center w-full flex-wrap ">Border Countries: <span
               class=" bg-light dark:bg-dark-elements  shadow-[0px_0px_3px_2px_#00000024] w-10 p-1 rounded ml-2 "
               v-for="border in country.borders"> {{ border }}
             </span> </p>
