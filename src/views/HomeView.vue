@@ -1,8 +1,12 @@
 <script setup>
 import Card from 'primevue/card';
 import data from '/src/assets/data.json'
-import { ref, computed, watch } from 'vue'
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router';
 import Select from '/src/components/SelectComponent.vue';
+
+const route = useRoute();
+
 
 // remove the shit
 const pureWorld = ref(data.filter((data) => data.name !== "Israel"))
@@ -39,6 +43,10 @@ setTimeout(() => {
   loading.value = false
 }, 1500);
 
+
+
+
+
 </script>
 
 <template>
@@ -57,8 +65,8 @@ setTimeout(() => {
 
     <Select @setSelectedRegion="setSelectedRegion" />
   </section>
-
-  <section class="flex flex-row flex-wrap gap-16 justify-center pt-8">
+  {{ mouseY }}
+  <section class="flex flex-row flex-wrap gap-16 justify-center pt-8" id="home">
 
     <router-link v-for="item in searchCountries" :to="item.name">
       <Card class=" w-[14rem] bg-light !rounded overflow-hidden !shadow-lg ">

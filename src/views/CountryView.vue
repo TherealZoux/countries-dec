@@ -36,8 +36,8 @@ setTimeout(() => {
           <i class="pi pi-arrow-left "></i> Back</button>
       </router-link>
     </div>
-    <div class="flex flex-col lg:flex-row gap-12 sm:gap-24 w-[90%]  mx-auto mt-0  ">
-      <div>
+    <div class="flex flex-col lg:flex-row  gap-12 sm:gap-24 w-[90%]  mx-auto mt-0  ">
+      <div class="lg:w-[50%]">
         <img :src="country.flags.svg" alt="country flag" class="w-full">
       </div>
       <div class="flex flex-col gap-8 justify-center">
@@ -48,11 +48,11 @@ setTimeout(() => {
             <li>Population: <span> {{ country.population }} </span></li>
             <li>Region: <span> {{ country.region }}</span></li>
             <li>Sub Region: <span> {{ country.subregion }}</span></li>
-            <li>Capital: <span> {{ country.capital }}</span></li>
+            <li v-if="country.capital">Capital: <span> {{ country.capital }}</span></li>
           </ul>
           <ul class="flex flex-col flex-wrap text-[16px] font-normal gap-2">
             <li>Top Level Domain: <span> {{ country.topLevelDomain[0] }}</span></li>
-            <li>Currencies: <span> {{ country.currencies[0].name }}</span></li>
+            <li v-if="country.currencies">Currencies: <span> {{ country.currencies[0].name }}</span></li>
             <li>
               Languages: <span class="" v-for="lang in country.languages"> {{ lang.name }}, </span>
             </li>
