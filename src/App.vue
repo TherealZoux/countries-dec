@@ -5,7 +5,7 @@ import HeaderComponent from '/src/components/HeaderComponent.vue'
 
 <template>
   <HeaderComponent />
-  <main class=" bg-light-bg dark:bg-dark-bg dark:text-light sm:px-[4rem] ">
+  <main class=" bg-light-bg dark:bg-dark-bg dark:text-light  ">
     <router-view></router-view>
   </main>
 </template>

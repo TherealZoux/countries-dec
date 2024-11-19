@@ -15,10 +15,13 @@ body {
   font-weight: 300; /* Light */
   font-size:14px;
   overflow:hidden;
-  height: 80vh;
+  height: 100%;
 }
 
 h1 {
   font-weight: 800; /* Extra-Bold */
 }
-
+#app{
+  overflow: hidden;
+  position: relative;
+}

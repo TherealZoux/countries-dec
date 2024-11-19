@@ -28,15 +28,17 @@ setTimeout(() => {
     v-if="loading">
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
   </div>
-  <section class=" h-[100%] flex flex-col gap-16 pt-14 ">
-    <router-link to="/" class="w-fit ml-4 sm:ml-0 ">
-      <button
-        class="flex bg-light dark:bg-dark-elements   shadow-[0px_0px_3px_2px_#00000024] w-28 p-2 rounded gap-2 items-center justify-center">
-        <i class="pi pi-arrow-left "></i> Back</button>
-    </router-link>
-    <div class="flex flex-col sm:flex-row gap-12 sm:gap-24 w-[90%] m-auto mt-0  sm:m-0 ">
+  <section class=" h-[100%] relative  w-full overflow-scroll pb-32 flex flex-col gap-16 pt-14 ">
+    <div class=" w-[90%] mx-auto">
+      <router-link to="/" class="w-fit ml-4 md:ml-0 ">
+        <button
+          class="flex bg-light dark:bg-dark-elements   shadow-[0px_0px_3px_2px_#00000024] w-28 p-2 rounded gap-2 items-center justify-center">
+          <i class="pi pi-arrow-left "></i> Back</button>
+      </router-link>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-12 sm:gap-24 w-[90%]  mx-auto mt-0  ">
       <div>
-        <img :src="country.flags.svg" alt="country flag" class="w-[30rem]">
+        <img :src="country.flags.svg" alt="country flag" class="w-full">
       </div>
       <div class="flex flex-col gap-8 justify-center">
         <h1 class="text-3xl">{{ country.name }}</h1>
@@ -57,7 +59,7 @@ setTimeout(() => {
           </ul>
         </div>
         <div>
-          <p class="font-bold">Border Countries: <span
+          <p class="font-bold flex gap-1 items-center w-fit ">Border Countries: <span
               class=" bg-light dark:bg-dark-elements  shadow-[0px_0px_3px_2px_#00000024] w-10 p-1 rounded ml-2 "
               v-for="border in country.borders"> {{ border }}
             </span> </p>

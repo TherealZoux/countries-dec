@@ -47,7 +47,7 @@ setTimeout(() => {
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
   </div>
   <section
-    class="pb-14 sm:pb-0 sm:mb-8 mb-16 pt-8 flex justify-between sm:items-center flex-col sm:flex-row gap-2 h-[5rem]">
+    class="pb-14 sm:pb-0 sm:mb-8 mb-16 pt-8 flex justify-between sm:items-center flex-col sm:flex-row gap-2 h-[5rem] w-[90%] mx-auto">
     <div
       class="bg-light dark:bg-dark-elements w-[90%] m-auto sm:m-0 sm:w-[22rem] justify-center flex sm:justify-start items-center px-4 rounded shadow">
       <i class="pi pi-search" style="color: gray;"></i>
