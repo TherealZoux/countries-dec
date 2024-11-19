@@ -5,9 +5,14 @@ import HeaderComponent from '/src/components/HeaderComponent.vue'
 
 <template>
   <HeaderComponent />
-  <main class="min-h-[100vh]  bg-light-bg dark:bg-dark-bg dark:text-light sm:px-[4rem] ">
+  <main class=" bg-light-bg dark:bg-dark-bg dark:text-light sm:px-[4rem] ">
     <router-view></router-view>
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  height: calc(100vh - 1rem);
+  overflow: scroll;
+}
+</style>

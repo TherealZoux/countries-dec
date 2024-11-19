@@ -9,19 +9,31 @@
 </template>
 
 <script setup>
+import { ref, onBeforeMount } from 'vue'
 
-import { ref } from 'vue'
-
-function toggleDarkMode() {
-  document.documentElement.classList.toggle("dark")
-  icon.value = icon.value = icon.value === 'pi pi-moon' ? 'pi pi-sun' : 'pi pi-moon';
-
-
-}
 
 const icon = ref("pi pi-moon");
+const theme = ref('light')
 
 
+function toggleDarkMode() {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  localStorage.setItem('theme', theme.value);
+
+  document.documentElement.classList.toggle("dark")
+  icon.value = icon.value = icon.value === 'pi pi-moon' ? 'pi pi-sun' : 'pi pi-moon';
+}
+
+
+onBeforeMount(() => {
+  const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : localStorage.setItem('theme', 'light');
+  if (savedTheme) {
+    theme.value = savedTheme
+  }
+  if (theme.value === 'dark') {
+    document.documentElement.classList.toggle("dark")
+  }
+})
 
 </script>
 

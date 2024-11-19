@@ -4547,7 +4547,7 @@
     "area": 1002450,
     "gini": 31.5,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "LBY", "SDN"],
+    "borders": ["PAL", "LBY", "SDN"],
     "nativeName": "مصر‎",
     "numericCode": "818",
     "flags": {
@@ -7505,7 +7505,7 @@
     "name": "Israel",
     "topLevelDomain": [".il"],
     "alpha2Code": "IL",
-    "alpha3Code": "ISR",
+    "alpha3Code": "PAL",
     "callingCodes": ["972"],
     "capital": "Jerusalem",
     "altSpellings": ["IL", "State of Israel", "Medīnat Yisrā'el"],
@@ -7559,7 +7559,7 @@
       "hu": "Izrael"
     },
     "flag": "https://flagcdn.com/il.svg",
-    "cioc": "ISR",
+    "cioc": "PAL",
     "independent": true
   },
   {
@@ -7830,7 +7830,7 @@
     "area": 89342,
     "gini": 33.7,
     "timezones": ["UTC+03:00"],
-    "borders": ["IRQ", "ISR", "SAU", "SYR"],
+    "borders": ["IRQ", "PAL", "SAU", "SYR"],
     "nativeName": "الأردن",
     "numericCode": "400",
     "flags": {
@@ -8373,7 +8373,7 @@
     "area": 10452,
     "gini": 31.8,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "SYR"],
+    "borders": ["PAL", "SYR"],
     "nativeName": "لبنان",
     "numericCode": "422",
     "flags": {
@@ -11481,7 +11481,7 @@
     "demonym": "Palestinian",
     "gini": 33.7,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "EGY", "JOR"],
+    "borders": ["PAL", "EGY", "JOR"],
     "nativeName": "فلسطين",
     "numericCode": "275",
     "flags": {
@@ -14851,7 +14851,7 @@
     "area": 185180,
     "gini": 37.5,
     "timezones": ["UTC+02:00"],
-    "borders": ["IRQ", "ISR", "JOR", "LBN", "TUR"],
+    "borders": ["IRQ", "PAL", "JOR", "LBN", "TUR"],
     "nativeName": "سوريا",
     "numericCode": "760",
     "flags": {

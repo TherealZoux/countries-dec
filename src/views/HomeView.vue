@@ -9,7 +9,7 @@ const pureWorld = ref(data.filter((data) => data.name !== "Israel"))
 const countries = [{ naem: "Africa" }, { name: "America" }, { name: "Asia" }, { name: "Europe" }, { name: "Oceania" }]
 const selectedRegion = ref("")
 const searchData = ref("")
-
+const loading = ref(true)
 
 // Filter countries based on the search data
 const searchCountries = computed(() => {
@@ -35,9 +35,17 @@ const setSelectedRegion = (region) => {
 
 }
 
+setTimeout(() => {
+  loading.value = false
+}, 1500);
+
 </script>
 
 <template>
+  <div class="absolute h-full flex justify-center items-center w-full bg-light dark:bg-dark-bg left-0 z-40"
+    v-if="loading">
+    <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+  </div>
   <section
     class="pb-14 sm:pb-0 sm:mb-8 mb-16 pt-8 flex justify-between sm:items-center flex-col sm:flex-row gap-2 h-[5rem]">
     <div
@@ -50,22 +58,25 @@ const setSelectedRegion = (region) => {
     <Select @setSelectedRegion="setSelectedRegion" />
   </section>
 
-  <section class="flex flex-row flex-wrap gap-16 justify-center ">
-    <Card v-for="item in searchCountries" class=" w-[14rem] bg-light !rounded overflow-hidden !shadow-lg ">
-      <template #header>
-        <img alt="user header" class="h-[10rem]" :src="item.flags.png" />
-      </template>
-      <template #title>
-        <h1 class="text-xl  bg-light dark:bg-dark-elements p-6 pb-0">{{ item.name }}</h1>
-      </template>
-      <template #content>
-        <ul class="bg-light dark:bg-dark-elements p-6 pt-2">
-          <li>Population: <span>{{ item.population }}</span></li>
-          <li>Region: <span>{{ item.region }}</span></li>
-          <li>Capital: <span>{{ item.capital }}</span></li>
-        </ul>
-      </template>
-    </Card>
+  <section class="flex flex-row flex-wrap gap-16 justify-center pt-8">
+
+    <router-link v-for="item in searchCountries" :to="item.name">
+      <Card class=" w-[14rem] bg-light !rounded overflow-hidden !shadow-lg ">
+        <template #header>
+          <img alt="user header" class="h-[10rem] w-full" :src="item.flags.png" />
+        </template>
+        <template #title>
+          <h1 class="text-xl  bg-light dark:bg-dark-elements p-6 pb-0">{{ item.name }}</h1>
+        </template>
+        <template #content>
+          <ul class="bg-light dark:bg-dark-elements p-6 pt-2">
+            <li>Population: <span>{{ item.population }}</span></li>
+            <li>Region: <span>{{ item.region }}</span></li>
+            <li>Capital: <span>{{ item.capital }}</span></li>
+          </ul>
+        </template>
+      </Card>
+    </router-link>
   </section>
 </template>
 
