@@ -41,7 +41,7 @@ const setSelectedRegion = (region) => {
 
 setTimeout(() => {
   loading.value = false
-}, 1500);
+}, 1000);
 
 
 
