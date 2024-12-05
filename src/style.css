@@ -25,3 +25,12 @@ h1 {
   overflow: hidden;
   position: relative;
 }
+::-webkit-scrollbar {
+width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+
+}
+

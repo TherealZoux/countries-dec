@@ -12,7 +12,7 @@ import HeaderComponent from '/src/components/HeaderComponent.vue'
 
 <style scoped>
 main {
-  height: calc(100vh - 1rem);
-  overflow: scroll;
+  height: calc(100vh - 4rem);
+  overflow: auto;
 }
 </style>

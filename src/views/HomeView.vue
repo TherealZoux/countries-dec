@@ -3,7 +3,7 @@ import Card from 'primevue/card';
 import data from '/src/assets/data.json'
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router';
-import Select from '/src/components/SelectComponent.vue';
+import FilterComponent from '/src/components/FilterComponent.vue';
 
 const route = useRoute();
 
@@ -63,10 +63,10 @@ setTimeout(() => {
         type="search" placeholder="Search for a country..." v-model="searchData">
     </div>
 
-    <Select @setSelectedRegion="setSelectedRegion" />
+    <FilterComponent @setSelectedRegion="setSelectedRegion" />
   </section>
   {{ mouseY }}
-  <section class="flex flex-row flex-wrap gap-16 justify-center pt-8" id="home">
+  <section class="flex flex-row flex-wrap gap-16 mb-20 justify-center pt-8" id="home">
 
     <router-link v-for="item in searchCountries" :to="item.name">
       <Card class=" w-[14rem] bg-light !rounded overflow-hidden !shadow-lg ">
